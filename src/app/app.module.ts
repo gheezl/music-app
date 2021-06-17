@@ -8,7 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import {appRoutes} from "./routes/routes";
-import { InputComponent } from './components/input/input.component'
+import { InputComponent } from './components/input/input.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InputComponent } from './components/input/input.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

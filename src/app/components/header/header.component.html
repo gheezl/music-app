@@ -1,12 +1,11 @@
 <div id="header-border">
     <h1 id="header-title">Music App</h1>
-    <div id="header-input">
-        <img  />
-        <app-input></app-input>
-    </div>
     <div id="header-links">
-        <span class="header-link">Link 1</span>
-        <span class="header-link">Link 2</span>
-        <span class="header-link">Link 3</span>
+        <span class="header-link">Popular</span>
+        <span class="header-link">For you</span>
+            <span (click)="toggleInput()" class="header-link">Search</span>  
+    </div>
+    <div *ngIf="inputToggle">
+            <app-input></app-input>    
     </div>
 </div>

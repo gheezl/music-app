@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  inputToggle:boolean = false
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleInput() {
+    this.inputToggle = !this.inputToggle
   }
 
 }
