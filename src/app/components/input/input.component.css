@@ -1,0 +1,22 @@
+#input-border {
+    display: flex;
+    flex-direction: row;
+}
+
+#input {
+    padding: 10px;
+}
+
+#button {
+    background-color: #1F1B24;
+    border: 1px solid  #12524f;
+    color: #A0E7E5;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#button:hover {
+    opacity: 0.75;
+}

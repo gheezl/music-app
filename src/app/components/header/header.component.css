@@ -1,0 +1,42 @@
+#header-border {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 3px solid black;
+    padding: 20px;
+    background-color: #1F1B24;
+    color: #A0E7E5;
+    border: 2px solid  #12524f;
+}
+
+#header-title {
+    display: flex;
+    justify-content: center;
+    cursor:default;
+}
+
+#header-input {
+    grid-column-start: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-links {
+    grid-column-start: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-link {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.header-link:hover {
+    border-bottom: 2px solid #12524f;
+}

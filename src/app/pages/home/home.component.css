@@ -1,0 +1,26 @@
+#home-border {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#home-create-account {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#create-account {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 150px;
+    padding-left: 150px;
+    border-radius: 20px;
+    background-color: #1F1B24;
+    cursor: pointer;
+}
+
+#create-account:hover {
+    opacity: 0.75;
+}
