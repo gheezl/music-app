@@ -2,10 +2,13 @@
     <h1 id="header-title">Music App</h1>
     <div id="header-links">
         <span class="header-link">Popular</span>
-        <span class="header-link">For you</span>
-            <span (click)="toggleInput()" class="header-link">Search</span>  
-    </div>
-    <div *ngIf="inputToggle">
-            <app-input></app-input>    
+        <span class="header-link">Viewed</span>
+        <span class="header-link" (click)="toggleInput()">Search</span>
+        <div *ngIf="inputToggle"  id="header-input">
+            <div id="input">
+                <span id="hide-input" (click)="toggleInput()">X</span>
+                <app-input></app-input>        
+            </div>
+        </div> 
     </div>
 </div>
