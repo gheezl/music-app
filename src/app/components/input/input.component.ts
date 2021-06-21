@@ -22,6 +22,9 @@ export class InputComponent implements OnInit {
   onEnter() {
     if (this.input.length > 0) {
       this.SearchService.getSearchResults(this.input)
+    }
+    else {
+      console.log("no input value")
     } 
   }
 }
