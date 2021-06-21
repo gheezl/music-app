@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {SearchService} from "../../services/search/search.service"
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   inputToggle:boolean = false
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
