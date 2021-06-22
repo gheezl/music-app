@@ -12,7 +12,8 @@ import { HomeComponent } from './pages/home/home.component';
 import {appRoutes} from "./routes/routes";
 import { InputComponent } from './components/input/input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ResultsComponent } from './pages/results/results.component'
+import { ResultsComponent } from './pages/results/results.component';
+import { CardComponent } from './components/card/card.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ResultsComponent } from './pages/results/results.component'
     HeaderComponent,
     HomeComponent,
     InputComponent,
-    ResultsComponent
+    ResultsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
