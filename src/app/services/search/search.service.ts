@@ -16,7 +16,7 @@ export class SearchService {
 
   constructor(private http:HttpClient) { }
 
-  // functions to call the API for data
+  // function to call the API for data
   getSearchResults(input:string):Observable<any> {
     return this.http.get<any>(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${input}`, this.headers)
   }

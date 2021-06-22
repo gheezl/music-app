@@ -11,14 +11,16 @@ import { HomeComponent } from './pages/home/home.component';
 
 import {appRoutes} from "./routes/routes";
 import { InputComponent } from './components/input/input.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ResultsComponent } from './pages/results/results.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    InputComponent
+    InputComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

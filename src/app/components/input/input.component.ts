@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 import { SearchService } from 'src/app/services/search/search.service';
 
@@ -9,23 +9,17 @@ import { SearchService } from 'src/app/services/search/search.service';
 })
 export class InputComponent implements OnInit {
   input:string = ""
+  @Output() results:any
 
   constructor(private SearchService:SearchService) { }
 
   ngOnInit(): void {
   }
 
-  ngOnChanges() {
-    console.log(this.input)
-  }
-
   onEnter() {
     if (this.input.length > 0) {
-      this.SearchService.getSearchResults(this.input)
+      this.SearchService.getSearchResults(this.input).subscribe(value => this.results=value.data)
     }
-    else {
-      console.log("no input value")
-    } 
   }
 }
   
