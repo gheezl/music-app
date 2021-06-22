@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Router} from "@angular/router"
 
 import { SearchService } from 'src/app/services/search/search.service';
 
@@ -9,10 +10,10 @@ import { SearchService } from 'src/app/services/search/search.service';
 })
 export class InputComponent implements OnInit {
   input:string = "";
+  results:any;
   @Output() inputToggle:any = new EventEmitter()
-  @Output() results:any = new EventEmitter()
  
-  constructor(private SearchService:SearchService) { }
+  constructor(private SearchService:SearchService, private router: Router) { }
 
   ngOnInit(): void {}
 
@@ -20,7 +21,8 @@ export class InputComponent implements OnInit {
     if (this.input.length > 0) {
       this.SearchService.getSearchResults(this.input).subscribe(async (value) => {
         await this.inputToggle.emit(false)
-        await this.results.emit(value.data)
+        // this.results = value.data
+        this.router.navigate(['/Search-Results'], {state: {data: value.data}})
       })
     }
   }
