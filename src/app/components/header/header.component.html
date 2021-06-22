@@ -7,7 +7,7 @@
         <div *ngIf="inputToggle"  id="header-input">
             <div id="input">
                 <span id="hide-input" (click)="toggleInput()">X</span>
-                <app-input (results)="addsResults($event)" (inputToggle)="hideInput($event)"></app-input>        
+                <app-input (inputToggle)="hideInput($event)"></app-input>        
             </div>
         </div> 
     </div>

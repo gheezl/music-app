@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
+  data:any;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(history.state.data)
+    this.data = history.state.data
   }
 
 }

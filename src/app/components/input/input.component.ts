@@ -10,7 +10,6 @@ import { SearchService } from 'src/app/services/search/search.service';
 })
 export class InputComponent implements OnInit {
   input:string = "";
-  results:any;
   @Output() inputToggle:any = new EventEmitter()
  
   constructor(private SearchService:SearchService, private router: Router) { }
@@ -21,7 +20,6 @@ export class InputComponent implements OnInit {
     if (this.input.length > 0) {
       this.SearchService.getSearchResults(this.input).subscribe(async (value) => {
         await this.inputToggle.emit(false)
-        // this.results = value.data
         this.router.navigate(['/Search-Results'], {state: {data: value.data}})
       })
     }

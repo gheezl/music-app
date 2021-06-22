@@ -7,24 +7,14 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   inputToggle:boolean = false
-  results:any;
 
   constructor() {}
 
   ngOnInit(): void {
   }
 
-  ngOnChanges() {
-    console.log(this.results)
-  }
-
   toggleInput() {
     this.inputToggle = !this.inputToggle
-  }
-
-  addsResults(events:any) {
-    console.log(events)
-    this.results = events
   }
 
   hideInput(newValue:boolean) {
