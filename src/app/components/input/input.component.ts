@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 import { SearchService } from 'src/app/services/search/search.service';
 
@@ -8,18 +8,20 @@ import { SearchService } from 'src/app/services/search/search.service';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  input:string = ""
-  @Output() results:any
-
+  input:string = "";
+  @Output() inputToggle:any = new EventEmitter()
+  @Output() results:any = new EventEmitter()
+ 
   constructor(private SearchService:SearchService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  onEnter() {
+  async onEnter() {
     if (this.input.length > 0) {
-      this.SearchService.getSearchResults(this.input).subscribe(value => this.results=value.data)
+      this.SearchService.getSearchResults(this.input).subscribe(async (value) => {
+        await this.inputToggle.emit(false)
+        await this.results.emit(value.data)
+      })
     }
   }
 }
-  

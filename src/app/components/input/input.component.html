@@ -1,4 +1,4 @@
 <div id="input-border">
     <input id="input" placeholder="Search for songs and artists" [(ngModel)]="input"   />
-    <button id="button" (click)="onEnter()" >Search</button>
+    <button id="button" (click)="onEnter()" [routerLink]="['/Search-Results']" >Search</button>
 </div>
