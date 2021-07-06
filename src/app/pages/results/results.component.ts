@@ -7,15 +7,16 @@ import { Component, OnInit} from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
   data:any;
+  input:any;
 
   constructor() { }
 
   ngOnInit(): void {
     this.data = history.state.data
+    this.input = history.state.input
   }
 
   ngOnChanges() {
     this.data = history.state.data
-    console.log(this.data)
   }
 }

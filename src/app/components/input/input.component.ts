@@ -20,7 +20,7 @@ export class InputComponent implements OnInit {
     if (this.input.length > 0) {
       this.SearchService.getSearchResults(this.input).subscribe(async (value) => {
         await this.inputToggle.emit(false)
-        this.router.navigate(['/Search-Results'], {state: {data: value.data}})
+        this.router.navigate(['/Search-Results'], {state: {data: value.data, input: this.input}})
       })
     }
   }
