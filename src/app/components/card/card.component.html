@@ -1,7 +1,10 @@
-<div>
-    <img />
-    <div>
-        <span>{{ song }}</span>    
-        <span></span>
+<div id="card-border" >
+    <img class="cover" src={{song.album.cover}} />
+    <div id="data-border">
+        <span class="title">{{ song.title }}</span>    
+        <span>by {{ song.artist.name }}</span>
+        <audio controls>
+            <source src={{song.preview}} type="audio/mpeg">
+        </audio>
     </div>
 </div>

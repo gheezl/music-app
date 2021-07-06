@@ -1,0 +1,37 @@
+#card-border {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #1F1B24;
+    cursor: pointer;
+    color: #A0E7E5;
+}
+
+.cover {
+    border-radius: 25px;
+}
+
+#data-border {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+audio { 
+    height: 25px;
+    /* width: 600px;  */
+    box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+    border-radius: 90px;
+    transform: scale(1.05);
+    color: #A0E7E5;
+    margin-top: 20px;
+    /* margin-left: 10px; */
+}
