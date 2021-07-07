@@ -12,9 +12,9 @@ export class RedirectComponent implements OnInit {
   constructor(private PreviousUrlService: PreviousUrlService, private router: Router) { }
 
   ngOnInit(): void {
-    if (this.PreviousUrlService.getPreviousUrl() == "/Search-Results") {
+    // if (this.PreviousUrlService.getPreviousUrl() == "/Search-Results") {
       this.router.navigate(['/Search-Results'], {state: {data: history.state.data, input: history.state.input}}) 
-    }
+    // }
   }
 
 }
