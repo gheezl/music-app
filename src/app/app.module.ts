@@ -15,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResultsComponent } from './pages/results/results.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { RedirectComponent } from './components/redirect/redirect.component'
+import { RedirectComponent } from './pages/redirect/redirect.component';
+import { ListenedComponent } from './pages/listened/listened.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RedirectComponent } from './components/redirect/redirect.component'
     ResultsComponent,
     CardComponent,
     FooterComponent,
-    RedirectComponent
+    RedirectComponent,
+    ListenedComponent
   ],
   imports: [
     BrowserModule,

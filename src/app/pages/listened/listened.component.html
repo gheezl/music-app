@@ -1,0 +1,4 @@
+<span id="listened-results">All the songs you have listened to</span>
+<div id="listened-border" *ngFor="let result of savedSongs;">
+    <app-card [song]="result"></app-card>
+</div>
