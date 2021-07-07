@@ -4,5 +4,5 @@ import {ResultsComponent} from "../pages/results/results.component"
 
 export const appRoutes:Routes =[
     {path: "", component: HomeComponent},
-    {path: "Search-Results", component: ResultsComponent},
+    {path: "Search-Results", component: ResultsComponent, data: history},
 ]

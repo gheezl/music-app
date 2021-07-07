@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-results',
@@ -14,6 +14,7 @@ export class ResultsComponent implements OnInit {
   ngOnInit(): void {
     this.data = history.state.data
     this.input = history.state.input
+    console.log(this.data)
   }
 
   ngOnChanges() {
