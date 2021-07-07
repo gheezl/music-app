@@ -5,7 +5,6 @@
     padding: 15px;
     border-radius: 20px;
     background-color: #1F1B24;
-    cursor: pointer;
     color: #A0E7E5;
 }
 
@@ -14,7 +13,7 @@
     margin-right: 10px;
 }
 
-#data-border {
+.data-border {
     display: flex;
     flex-direction: column;
     margin-left: 15px;
@@ -26,10 +25,28 @@
     padding-bottom: 10px;
 }
 
+#left-column {
+    width: 100%;
+    align-items: flex-end;
+}
+
+#full-song:hover {
+    opacity: 0.75;
+}
+
+#duration {
+    margin-top: 10px;
+}
+
 audio { 
     height: 25px;
     box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
     border-radius: 90px;
     transform: scale(1.05);
     margin-top: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #A0E7E5;
 }

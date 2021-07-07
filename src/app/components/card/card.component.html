@@ -1,10 +1,14 @@
 <div id="card-border" >
     <img class="cover" src={{song.album.cover}} />
-    <div id="data-border">
+    <div class="data-border">
         <span class="title">{{ song.title }}</span>    
         <span>by {{ song.artist.name }}</span>
         <audio controls>
             <source src={{song.preview}} type="audio/mpeg">
         </audio>
     </div>
+    <div class="data-border" id="left-column">
+        <a href={{song.link}} id="full-song" >Full song ></a>
+        <span id="duration" >{{duration}} minutes long</span>
+    </div>    
 </div>

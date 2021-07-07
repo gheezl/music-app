@@ -7,10 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() song:any = {};
+  duration:string = "";
 
   constructor() { }
 
   ngOnInit(): void {
     console.log(this.song)
+
+    let tempDuration = this.song.duration / 60
+    this.duration = tempDuration.toFixed(2)
   }
 }
