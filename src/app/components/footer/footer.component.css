@@ -1,0 +1,18 @@
+#footer-border {
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid black;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #1F1B24;
+    color: #A0E7E5;
+}
+
+#repository {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#repository:hover {
+    opacity: 0.75;
+}

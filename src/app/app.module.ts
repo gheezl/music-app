@@ -13,7 +13,8 @@ import {appRoutes} from "./routes/routes";
 import { InputComponent } from './components/input/input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResultsComponent } from './pages/results/results.component';
-import { CardComponent } from './components/card/card.component'
+import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardComponent } from './components/card/card.component'
     HomeComponent,
     InputComponent,
     ResultsComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
