@@ -14,7 +14,7 @@ export class InputComponent implements OnInit {
  
   constructor(private SearchService:SearchService, private router: Router) { }
 
-  ngOnInit(): void {console.log(this.router)}
+  ngOnInit(): void {}
 
   async onEnter() {
     if (this.input.length > 0) {
@@ -24,7 +24,7 @@ export class InputComponent implements OnInit {
           this.router.navigate(['/Search-Results'], {state: {data: value.data, input: this.input}})  
         }
         else if (this.router.url == "/Search-Results") {
-          this.router.navigate(['/'], {state: {data: value.data, input: this.input}})
+          this.router.navigate(['/Redirect'], {state: {data: value.data, input: this.input}})
         }
       })
     }

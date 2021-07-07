@@ -14,7 +14,8 @@ import { InputComponent } from './components/input/input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResultsComponent } from './pages/results/results.component';
 import { CardComponent } from './components/card/card.component';
-import { FooterComponent } from './components/footer/footer.component'
+import { FooterComponent } from './components/footer/footer.component';
+import { RedirectComponent } from './components/redirect/redirect.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component'
     InputComponent,
     ResultsComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    RedirectComponent
   ],
   imports: [
     BrowserModule,

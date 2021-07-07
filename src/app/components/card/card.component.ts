@@ -12,8 +12,6 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.song)
-
     let tempDuration = this.song.duration / 60
     this.duration = tempDuration.toFixed(2)
   }
