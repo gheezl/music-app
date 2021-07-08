@@ -16,7 +16,8 @@ import { ResultsComponent } from './pages/results/results.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RedirectComponent } from './pages/redirect/redirect.component';
-import { ListenedComponent } from './pages/listened/listened.component'
+import { ListenedComponent } from './pages/listened/listened.component';
+import { RecommendedComponent } from './components/recommended/recommended.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ListenedComponent } from './pages/listened/listened.component'
     CardComponent,
     FooterComponent,
     RedirectComponent,
-    ListenedComponent
+    ListenedComponent,
+    RecommendedComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ export class SaveSongService {
       var contains = placeholder.some(item =>{
         return JSON.stringify(item) === JSON.stringify(song);
       });
+      console.log(song)
       if (!contains) {
         window.localStorage.setItem("saved-song", JSON.stringify([...placeholder, song]))  
       }

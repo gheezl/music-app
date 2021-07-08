@@ -3,8 +3,8 @@
         <h1 id="header-title" [routerLink]="['/']">Music App</h1>       
     </div>
     <div id="header-links">
-        <span class="header-link">Popular</span>
-        <span class="header-link" [routerLink]="['/Listened']">listened</span>
+        <span class="header-link">Recommended</span>
+        <span class="header-link" [routerLink]="['/Listened']">Listened</span>
         <span class="header-link" (click)="toggleInput()">Search</span>
         <div *ngIf="inputToggle"  id="header-input">
             <div id="input">
