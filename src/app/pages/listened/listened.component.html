@@ -1,6 +1,7 @@
 <div class="screen-height">
-    <span id="listened-results">All the songs you have listened to</span>
+    <span id="listened-results">{{this.text}}</span>
     <div id="listened-border" *ngFor="let result of savedSongs;">
         <app-card [song]="result"></app-card>
     </div>
+    <span (click)="clearSongs()" id="clear-songs">{{savedSongs[0] ? "Clear all songs" : null}}</span>
 </div>

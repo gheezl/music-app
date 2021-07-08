@@ -25,4 +25,8 @@ export class SaveSongService {
       return parsedSongs.reverse()
     }
   }
+
+  deleteSongs() {
+    localStorage.removeItem("saved-song")
+  }
 }
