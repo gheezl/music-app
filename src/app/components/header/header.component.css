@@ -7,15 +7,18 @@
     color: #A0E7E5;
 }
 
+#home-button {
+    display: flex;
+    justify-content: center;
+}
+
 #header-title {
     display: flex;
-    justify-content: left;
-    padding-left: 75px;
-    cursor:default;
+    width: 150px;
     font-size: 20px;
     height: 100%;
-    align-items: center;
     cursor: pointer;
+    align-items: center;
 }
 
 #header-title:hover {
