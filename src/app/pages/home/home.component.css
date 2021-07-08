@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 #home-create-account {
     display: flex;
     justify-content: center;
     font-size: 20px;
+    margin-bottom: 100px;
 }
 
 #create-account {
@@ -25,4 +25,39 @@
 
 #create-account:hover {
     opacity: 0.75;
+}
+
+#home-introduction {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    justify-content: center;
+    background-color: #1F1B24;
+    padding: 50px;
+}
+
+#images {
+    display: flex;
+}
+
+.image {
+    border: 1px solid #A0E7E5;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.image:hover {
+    opacity: 0.50;
+}
+
+#introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #A0E7E5;
+}
+
+.text {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
