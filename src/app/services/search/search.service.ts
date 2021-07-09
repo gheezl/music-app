@@ -20,4 +20,8 @@ export class SearchService {
   getSearchResults(input:string):Observable<any> {
     return this.http.get<any>(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${input}`, this.headers)
   }
+
+  getAlbum(id: number):Observable<any> {
+    return this.http.get<any>(`https://deezerdevs-deezer.p.rapidapi.com/album/${id}`, this.headers)
+  }
 }
