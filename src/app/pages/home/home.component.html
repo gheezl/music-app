@@ -21,15 +21,7 @@
         </div>
     </div>
     <div id="options-border">
-        <span id="search" (click)="toggleInput()">< Search for a song</span>
-        <div *ngIf="inputToggle"  id="header-input">
-            <div id="input">
-                <span id="hide-input" (click)="toggleInput()">X</span>
-                <app-input (inputToggle)="hideInput($event)"></app-input>        
-            </div>
-        </div> 
-        <div id="code">
-            <span>See code ></span>
-        </div>
+        <a id="search" [routerLink]="['/Recommended']">< See recommendations</a>
+        <a id="code" href="https://github.com/gheezl/music-app">See code ></a>
     </div>
 </div>
