@@ -10,18 +10,22 @@ export class RecommendedService {
 
   constructor(private SaveSongService: SaveSongService, private SearchService: SearchService) { }
 
-  getRecommended() {
+  getRecommended():object | boolean {
     const savedSongs = this.SaveSongService.getSongs()
     let similarTracks: object[] = []
-    savedSongs.map((song: { album: { id: any; }; }) => {
-      this.SearchService.getAlbum(song.album.id).subscribe(value => {
-        const location = Math.floor(Math.random() * value.tracks.data.length)
-        const recommendation = value.tracks.data[location]
-        recommendation.album = song.album
-        similarTracks.push(recommendation);
-      })
-    })
-    return similarTracks
+    if (savedSongs) {
+      savedSongs.map((song: { album: { id: any; }; }) => {
+        this.SearchService.getAlbum(song.album.id).subscribe(value => {
+          const location = Math.floor(Math.random() * value.tracks.data.length)
+          const recommendation = value.tracks.data[location]
+          recommendation.album = song.album
+          similarTracks.push(recommendation);
+        })
+      }) 
+      return similarTracks 
+    }
+    else {
+      return false
+    }
   }
-
 }

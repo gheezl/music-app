@@ -2,19 +2,7 @@
     <div id="home-create-account">
         <a href="https://www.deezer.com/en/offers" id="create-account">Create Account</a>     
     </div>
-    <!-- <div id="home-introduction">
-        <div id="images">
-            <img 
-                src="https://s3.amazonaws.com/heights-photos/wp-content/uploads/2020/09/27162834/jojinectar.jpg" 
-                height="250px"
-                class="image"
-            />  
-            <img 
-                src="https://s3.amazonaws.com/heights-photos/wp-content/uploads/2020/09/27162834/jojinectar.jpg" 
-                height="250px"
-                class="image"
-            />
-        </div>
+    <div id="home-introduction">
         <div id="introduction">
             <span class="text">
                 Hello, welcome to this generic angular music player. It utilizes the deezer public api to display a near infinite 
@@ -24,9 +12,24 @@
                 In order to listen to a full song you will need to make a premium account with deezer using the button above.
             </span>
             <span class="text">
-                You can use the buttons on the header to navigate around the application so that you can search for songs and view 
-                the songs you all ready listened to.
-            </span>  
+                You can use the buttons on the header to navigate around the application so that you can search for songs, view 
+                the songs you all ready listened to, and see our recommendations.
+            </span>
+            <span class="text">
+                I hope you enjoy whatever this is supposed to be lol.
+            </span>
         </div>
-    </div> -->
+    </div>
+    <div id="options-border">
+        <span id="search" (click)="toggleInput()">< Search for a song</span>
+        <div *ngIf="inputToggle"  id="header-input">
+            <div id="input">
+                <span id="hide-input" (click)="toggleInput()">X</span>
+                <app-input (inputToggle)="hideInput($event)"></app-input>        
+            </div>
+        </div> 
+        <div id="code">
+            <span>See code ></span>
+        </div>
+    </div>
 </div>

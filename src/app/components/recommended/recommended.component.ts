@@ -7,13 +7,18 @@ import { RecommendedService } from 'src/app/services/recommended/recommended.ser
   styleUrls: ['./recommended.component.css']
 })
 export class RecommendedComponent implements OnInit {
-  recommended: object[] = []
-  text: string = "Your recommended songs."
+  recommended: any;
+  text: string = ""
 
   constructor(private RecommendedService: RecommendedService) { }
 
   ngOnInit(): void {
     this.recommended = this.RecommendedService.getRecommended()
-    console.log(this.recommended)
+    if (this.recommended) {
+      this.text = "Your recommended songs."
+    }
+    else {
+      this.text = "You have no recommendations, listen to some songs so we know what you want to hear."
+    }
   }
 }
