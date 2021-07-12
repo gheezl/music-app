@@ -28,5 +28,4 @@ export class ListenedComponent implements OnInit {
     this.savedSongs = []
     this.text = "You haven't listened to any songs yet."
   }
-
 }
