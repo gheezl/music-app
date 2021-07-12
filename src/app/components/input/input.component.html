@@ -1,8 +1,13 @@
 <div id="input-border">
-    <input id="input" placeholder="Search for songs and artists" [(ngModel)]="input"   />
+    <input 
+        id="input" 
+        placeholder="Search for songs and artists" 
+        [(ngModel)]="input" 
+        (keyup.enter)="onEnter()"   
+    />
     <button 
         id="button" 
-        (click)="onEnter()"  
+        (click)="onEnter()" 
     >
         Search
     </button>

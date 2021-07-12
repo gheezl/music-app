@@ -29,4 +29,8 @@ export class InputComponent implements OnInit {
       })
     }
   }
+
+  test() {
+    console.log("HELLO WORLD")
+  }
 }
